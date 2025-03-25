@@ -7,7 +7,7 @@ vim.opt.fileencoding = 'utf-8'
 vim.wo.number = true
 vim.opt.relativenumber = true
 
---language for spell 
+--language for spell
 vim.opt.spelllang = 'es'
 
 

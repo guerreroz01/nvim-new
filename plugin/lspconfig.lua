@@ -189,7 +189,7 @@ vim.diagnostic.config({
     prefix = '●',
     severity_limit = 'Warning', -- Only show virtual text for errors and warnings
   },
-  update_in_insert = false, -- Better to not update diagnostics while typing
+  update_in_insert = false,     -- Better to not update diagnostics while typing
   float = {
     source = "always",
     border = "rounded",

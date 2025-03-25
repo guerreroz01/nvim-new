@@ -1,4 +1,5 @@
 local keymap = vim.keymap
+vim.g.mapleader = " "
 
 keymap.set('n', 'x', '"_x')
 
@@ -21,7 +22,8 @@ keymap.set('n', 'dw', 'vb"_d')
 keymap.set('n', 'cw', 'vb"_c')
 
 -- Select all
-keymap.set('n', '<C-a>', 'gg<S-v>G')
+keymap.set('n', '<leader>a', 'gg<S-v>G')
+
 
 -- Save with root permission (not working for now)
 --vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
@@ -44,3 +46,12 @@ keymap.set('n', '<C-w><left>', '<C-w><')
 keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
+
+-- FZF
+keymap.set('n', '<leader>ff', '<cmd>FZF<CR>', { noremap = true, silent = true })
+-- Buscar en los archivos (tipo grep)
+keymap.set('n', '<leader>rg', ':Rg<CR>', { noremap = true, silent = true })
+-- Buscar buffers abiertos
+keymap.set('n', '<leader>b', ':Buffers<CR>', { noremap = true, silent = true })
+-- Buscar comandos recientes
+keymap.set('n', '<leader>h', ':History<CR>', { noremap = true, silent = true })
