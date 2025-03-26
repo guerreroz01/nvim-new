@@ -59,4 +59,22 @@ packer.startup(function(use)
   use 'simrat39/rust-tools.nvim'
   use { 'junegunn/fzf', run = './install --bin' }
   use 'junegunn/fzf.vim'
+  use { "ellisonleao/gruvbox.nvim" }
+  --[[
+  use {
+    'rose-pine/neovim',
+    as = 'rose-pine',
+    config = function()
+      require("rose-pine").setup({
+        variant = "main", -- Elige entre "main", "moon", o "dawn"
+        styles = {
+          bold = true,
+          italic = true,
+        },
+      })
+      vim.cmd("colorscheme rose-pine")
+    end
+  }
+
+  --]]
 end)
