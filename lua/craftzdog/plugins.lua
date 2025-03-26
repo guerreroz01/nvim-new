@@ -60,6 +60,15 @@ packer.startup(function(use)
   use { 'junegunn/fzf', run = './install --bin' }
   use 'junegunn/fzf.vim'
   use { "ellisonleao/gruvbox.nvim" }
+  use {
+    'akinsho/toggleterm.nvim',
+    config = function()
+      require("toggleterm").setup({
+        direction = 'float', -- o 'horizontal'/'vertical'
+        shell = vim.o.shell, -- Usa tu shell normal
+      })
+    end
+  }
   --[[
   use {
     'rose-pine/neovim',

@@ -22,7 +22,7 @@ keymap.set('n', 'dw', 'vb"_d')
 keymap.set('n', 'cw', 'vb"_c')
 
 -- Select all
-keymap.set('n', '<leader>a', 'gg<S-v>G')
+-- keymap.set('n', '<leader>a', 'gg<S-v>G')
 
 
 -- Save with root permission (not working for now)
@@ -54,3 +54,7 @@ keymap.set('n', '<leader>rg', ':Rg<CR>', { noremap = true, silent = true })
 keymap.set('n', '<leader>b', ':Buffers<CR>', { noremap = true, silent = true })
 -- Buscar comandos recientes
 keymap.set('n', '<leader>h', ':History<CR>', { noremap = true, silent = true })
+-- Abrir/cerrar terminal
+vim.keymap.set('n', '<leader>t', ':ToggleTerm<CR>')
+-- Enviar comandos desde modo visual
+vim.keymap.set('v', '<leader>tt', ':ToggleTermSendVisualSelection<CR>')
