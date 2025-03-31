@@ -4,7 +4,6 @@ if not status then return end
 -- First: Set up ts_context_commentstring separately (NEW WAY)
 require('ts_context_commentstring').setup({
   enable_autocmd = false, -- Disabled for better performance
-  -- Updated context_commentstring config (simplified)
   context_commentstring = {
     enable = true,
   }
@@ -35,10 +34,10 @@ ts.setup {
     "html",
     "lua"
   },
-  autotag = {
-    enable = true,
-  },
 }
+
+-- NEW WAY: Set up nvim-ts-autotag separately
+require('nvim-ts-autotag').setup()
 
 -- Add this for faster loading (recommended by the plugin)
 vim.g.skip_ts_context_commentstring_module = true
