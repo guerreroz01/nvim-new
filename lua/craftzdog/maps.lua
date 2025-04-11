@@ -32,7 +32,7 @@ keymap.set('n', 'cw', 'vb"_c')
 keymap.set('n', '<F5>', ':noh<CR>', { noremap = true, silent = true })
 
 -- New tab
-keymap.set('n', 'te', ':tabedit')
+keymap.set('n', 'te', ':tabedit<CR>')
 -- Split window
 keymap.set('n', 'ss', ':split<Return><C-w>w')
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
@@ -46,8 +46,6 @@ keymap.set('n', '<C-w><left>', '<C-w><')
 keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
--- FZF
-keymap.set('n', '<leader>ff', '<cmd>FZF<CR>', { noremap = true, silent = true })
 -- Buscar en los archivos (tipo grep)
 keymap.set('n', '<leader>rg', ':Rg<CR>', { noremap = true, silent = true })
 -- Buscar buffers abiertos
